@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#ffe4e9;
+    font-family:Arial, sans-serif;
+    cursor:url("m.png.png"), auto;
+}
+
+main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px 0;
+}
+
+/* ===================== */
+/* WELCOME */
+/* ===================== */
+
+.heading{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.heading span{
+    display:inline-block;
+    font-family:'Press Start 2P', cursive;
+    font-size:2.5rem;
+    color:#f127c9;
+
+    text-shadow:
+        2px 2px 0 #003300,
+        4px 4px 0 #000,
+        0 0 15px #fe88e3;
+
+    white-space:nowrap;
+    overflow:hidden;
+
+    width:0;
+    border-right:3px solid purple;
+
+    animation:
+        typing 4s steps(7) infinite,
+        blink .6s infinite;
+}
+
+@keyframes typing{
+    0%{width:0;}
+    40%{width:7ch;}
+    80%{width:7ch;}
+    100%{width:0;}
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+/* ===================== */
+/* ABOUT ME BOX */
+/* ===================== */
+
+.cute-box{
+    width:550px;
+    max-width:90%;
+
+    background:#f8a9d1;
+
+    padding:35px;
+
+    border-radius:20px;
+    border:2px solid #ff4fb2;
+
+    box-shadow:
+        0 0 10px #ff4fb2,
+        0 0 20px #ff4fb2,
+        0 0 40px #ff66cc;
+
+    margin-bottom:40px;
+}
+
+.cute-box h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:25px;
+}
+
+.cute-box p{
+    font-size:22px;
+    line-height:2;
+    text-align:left;
+}
+
+/* ===================== */
+/* VIDEO */
+/* ===================== */
+
+.bottom-left-video{
+
+    width:160px;
+    height:auto;
+
+    display:block;
+    margin:20px auto 40px;
+
+    border:3px solid #ff4fd8;
+    border-radius:18px;
+
+    box-shadow:
+        0 0 10px #ff4fd8,
+        0 0 20px #ff4fd8,
+        0 0 40px #ff4fd8;
+
+    animation:pinkGlow 1.5s infinite alternate;
+}
+
+@keyframes pinkGlow{
+
+    from{
+        box-shadow:
+            0 0 8px #ff4fd8,
+            0 0 15px #ff4fd8,
+            0 0 30px #ff4fd8;
+    }
+
+    to{
+        box-shadow:
+            0 0 15px #ff80e5,
+            0 0 30px #ff80e5,
+            0 0 60px #ff80e5;
+    }
+
+}
+
+/* ===================== */
+/* SOCIAL ICONS */
+/* ===================== */
+
+.social-container{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:50px;
+}
+
+.icon{
+
+    width:90px;
+    height:90px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:20px;
+
+    background:#d8deef;
+
+    text-decoration:none;
+
+    overflow:hidden;
+
+    position:relative;
+
+    transition:.4s;
+
+    box-shadow:
+        -10px -10px 20px rgba(255,255,255,.7),
+        10px 10px 20px rgba(0,0,0,.2);
+}
+
+.icon i{
+
+    color:white;
+    font-size:22px;
+    z-index:2;
+    transition:.4s;
+}
+
+.icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:100%;
+
+    width:100%;
+    height:100%;
+
+    transition:.4s;
+
+    z-index:1;
+}
+
+.icon:hover::before{
+    top:0;
+}
+
+.icon:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 15px 25px rgba(0,0,0,.3);
+}
+
+.icon:hover i{
+    transform:scale(1.2);
+}
+
+.icon:active{
+    transform:scale(.95);
+}
+
+.instagram::before{
+
+    background:linear-gradient(
+        45deg,
+        #f58529,
+        #feda77,
+        #dd2a7b,
+        #8134af,
+        #515bd4
+    );
+}
+
+.youtube::before{
+    background:#ff0000;
+}
+
+.tiktok::before{
+    background:#000;
+}
+.cute-box h1{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:25px;
+
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+.cute-box h1{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:25px;
+
+    font-family:'Press Start 2P', cursive;
+
+    background-image:url("hh.jpg"); /* η εικόνα σου */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+}
+
+.img {
+   width: 120px;             /* μικρή και ωραία */
+  height: 120px;
+  object-fit: cover;        /* να μη χαλάει η εικόνα */
+  border-radius: 15px;      /* λίγο τετράγωνο στυλ */
+  margin: 15px auto;
+  display: block;
+    }
+    .img2 {
+   width: 120px;             /* μικρή και ωραία */
+  height: 120px;
+  object-fit: cover;        /* να μη χαλάει η εικόνα */
+  border-radius: 15px;      /* λίγο τετράγωνο στυλ */
+  margin: 15px auto;
+  display: block;
+    }
